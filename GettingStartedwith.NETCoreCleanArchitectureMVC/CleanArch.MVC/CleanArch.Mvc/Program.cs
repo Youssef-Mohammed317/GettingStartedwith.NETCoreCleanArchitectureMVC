@@ -1,4 +1,5 @@
 using CleanArch.Infra.Data.Context;
+using CleanArch.Infra.IoC;
 using CleanArch.Mvc.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,8 @@ namespace CleanArch.Mvc
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+
+            RegisterServices(builder.Services);
 
             var app = builder.Build();
 
@@ -54,6 +57,11 @@ namespace CleanArch.Mvc
                .WithStaticAssets();
 
             app.Run();
+        }
+
+        public static void RegisterServices(IServiceCollection services)
+        {
+            DependancyContainer.RegisterServices(services);
         }
     }
 }
