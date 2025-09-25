@@ -1,10 +1,12 @@
 <Solution>
+  <Folder Name="/Api/" />
   <Folder Name="/Application/">
     <Project Path="CleanArch.Application/CleanArch.Application.csproj" Id="1a350c43-7fa0-47cb-ac64-b5539a01b610" />
   </Folder>
   <Folder Name="/Domain/">
     <Project Path="CleanArch.Domain/CleanArch.Domain.csproj" />
   </Folder>
+  <Folder Name="/Infra.Bus/" />
   <Folder Name="/Infra.Data/">
     <Project Path="CleanArch.Infra.Data/CleanArch.Infra.Data.csproj" />
   </Folder>
