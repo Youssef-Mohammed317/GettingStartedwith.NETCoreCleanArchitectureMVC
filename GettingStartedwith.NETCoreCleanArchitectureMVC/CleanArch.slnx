@@ -1,9 +1,13 @@
 <Solution>
-  <Folder Name="/CleanArch.Application/" />
-  <Folder Name="/CleanArch.Domain/" />
-  <Folder Name="/CleanArch.Infra.Data/" />
-  <Folder Name="/CleanArch.Infra.IoC/" />
-  <Folder Name="/CleanArch.UI.MVC/">
+  <Folder Name="/Application/" />
+  <Folder Name="/Domain/">
+    <Project Path="CleanArch.Domain/CleanArch.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infra.Data/">
+    <Project Path="CleanArch.Infra.Data/CleanArch.Infra.Data.csproj" />
+  </Folder>
+  <Folder Name="/Infra.IoC/" />
+  <Folder Name="/Presentation/">
     <Project Path="CleanArch.MVC/CleanArch.Mvc/CleanArch.Mvc.csproj" />
   </Folder>
 </Solution>
