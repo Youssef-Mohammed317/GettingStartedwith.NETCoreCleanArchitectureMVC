@@ -3,5 +3,7 @@
   <Folder Name="/CleanArch.Domain/" />
   <Folder Name="/CleanArch.Infra.Data/" />
   <Folder Name="/CleanArch.Infra.IoC/" />
-  <Folder Name="/CleanArch.UI.MVC/" />
+  <Folder Name="/CleanArch.UI.MVC/">
+    <Project Path="CleanArch.MVC/CleanArch.Mvc/CleanArch.Mvc.csproj" />
+  </Folder>
 </Solution>
