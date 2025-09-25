@@ -1,0 +1,1 @@
+# GettingStartedwith.NETCoreCleanArchitectureMVC
