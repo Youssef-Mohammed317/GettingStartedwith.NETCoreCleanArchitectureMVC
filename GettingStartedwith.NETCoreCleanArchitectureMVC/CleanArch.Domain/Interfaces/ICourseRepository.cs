@@ -12,5 +12,7 @@ namespace CleanArch.Domain.Interfaces
         IEnumerable<Course> GetCourses();
 
         void Add(Course course);
+
+        void SaveChanges();
     }
 }

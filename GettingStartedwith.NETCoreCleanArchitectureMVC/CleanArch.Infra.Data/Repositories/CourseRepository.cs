@@ -26,5 +26,10 @@ namespace CleanArch.Infra.Data.Repositories
         {
             return _context.Courses;
         }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
+        }
     }
 }

@@ -29,6 +29,11 @@ namespace CleanArch.Api
                 cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
             });
 
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "University Api", Version = "v1" });
+            });
+
             RegisterServices(builder.Services);
 
             var app = builder.Build();
@@ -37,6 +42,12 @@ namespace CleanArch.Api
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "University Api v1");
+                });
             }
 
             app.UseHttpsRedirection();

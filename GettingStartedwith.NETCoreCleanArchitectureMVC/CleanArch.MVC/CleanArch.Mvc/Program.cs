@@ -27,6 +27,13 @@ namespace CleanArch.Mvc
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
 
+
+
+            builder.Services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+            });
+
             RegisterServices(builder.Services);
 
             var app = builder.Build();

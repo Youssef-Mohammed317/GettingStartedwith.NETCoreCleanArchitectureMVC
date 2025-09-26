@@ -30,6 +30,8 @@ namespace CleanArch.Domain.CommandHandler
 
             _courseRepository.Add(course);
 
+            _courseRepository.SaveChanges();
+
             return Task.FromResult(true);
         }
     }
