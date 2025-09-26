@@ -1,4 +1,5 @@
-﻿using CleanArch.Application.Interfaces;
+﻿using CleanArch.Application.AutoMapper;
+using CleanArch.Application.Interfaces;
 using CleanArch.Application.Services;
 using CleanArch.Domain.CommandHandler;
 using CleanArch.Domain.Commands;
@@ -33,6 +34,9 @@ namespace CleanArch.Infra.IoC
             // CleanArch.Infra.Data Layer
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<UniversityDbContext>();
+
+            services.AddAutoMapper(typeof(DomainToViewModelProfile), typeof(ViewModelToDomainProfile));
+
         }
     }
 }
