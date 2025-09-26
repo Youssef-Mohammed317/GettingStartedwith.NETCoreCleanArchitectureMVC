@@ -25,7 +25,7 @@ namespace CleanArch.Infra.IoC
             services.AddScoped<IMediatRHandler, InMemoryBus>();
 
             // Domain Handlers
-            services.AddScoped<IRequestHandler<CreateCourseCommand, bool>, CourseCommandHandler>();
+            services.AddScoped<IRequestHandler<CreateCourseCommand, bool>, CreateCourseCommandHandler>();
 
             // CleanArch.Application Layer
             services.AddScoped<ICourseService, CourseService>();
