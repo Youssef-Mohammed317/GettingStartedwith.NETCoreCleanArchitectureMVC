@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Application.AutoMapper
 {
-    public class AutoMapperConfigration
+    public static class AutoMapperConfigration
     {
-        //public static MapperConfiguration RegisterMappings()
-        //{
-        //    return new MapperConfiguration(cfg =>
-        //    {
-        //        cfg.AddProfile<DomainToViewModelProfile>();
-        //        cfg.AddProfile<ViewModelToDomainProfile>();
-        //    });
-        //}
+        public static void RegisterMappings(IServiceCollection services)
+        {
+            services.AddAutoMapper(cfg =>
+            {
+                cfg.AddProfile<DomainToViewModelProfile>();
+                cfg.AddProfile<ViewModelToDomainProfile>();
+            });
+        }
     }
 }
